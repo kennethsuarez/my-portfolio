@@ -1,9 +1,9 @@
 import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
+// import Image from "next/image"
+// import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Linkedin, Mail, Download, User, Cpu, MapPin, Phone } from "lucide-react"
+// import { Badge } from "@/components/ui/badge"
+import { Linkedin, Mail, User, Cpu, MapPin, Phone } from "lucide-react"
 import NetworkGraph from "@/components/network-graph"
 import { JSX, SVGProps } from "react"
 
