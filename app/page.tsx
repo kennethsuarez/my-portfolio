@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Linkedin, Mail, Download, User, Cpu, MapPin, Phone } from "lucide-react"
+import NetworkGraph from "@/components/network-graph"
 
 export default function Portfolio() {
   return (
@@ -171,13 +172,7 @@ export default function Portfolio() {
             </div>
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div className="relative aspect-video overflow-hidden rounded-lg">
-                <Image
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Working on code"
-                  width={600}
-                  height={400}
-                  className="object-cover"
-                />
+                <NetworkGraph />
               </div>
               <div className="space-y-4">
                 <p className="text-lg">
