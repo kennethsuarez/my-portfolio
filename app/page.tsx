@@ -43,7 +43,7 @@ export default function Portfolio() {
               <div className="space-y-6 text-center md:text-left">
                 <Badge className="px-3 py-1 text-sm mx-auto md:mx-0 inline-flex">Available for hire</Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                  Hi, I'm <span className="text-primary">Kenneth</span> <br />
+                  Hi, I&apos;m <span className="text-primary">Kenneth</span> <br />
                   Backend Engineer
                 </h1>
                 <p className="text-muted-foreground text-lg md:text-xl max-w-md mx-auto md:mx-0">
@@ -180,7 +180,7 @@ export default function Portfolio() {
                   (Boot, Core, Security, MVC) for Restful API development.
                 </p>
                 <p>
-                  I'm skilled in high-performance application development while using agile methodologies and have
+                  I&apos;m skilled in high-performance application development while using agile methodologies and have
                   extensive cloud infrastructure experience with AWS and GCP.
                 </p>
                 <p>
