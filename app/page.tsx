@@ -22,47 +22,49 @@ export default function Portfolio() {
     <div className="flex flex-col min-h-screen">
       {/* Header/Navigation */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="#" className="font-bold text-xl">
-            <span className="text-primary">Dev</span>Portfolio
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
-              About
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="flex h-16 items-center justify-between">
+            <Link href="#" className="font-bold text-xl">
+              <span className="text-primary">Dev</span>Portfolio
             </Link>
-            <Link href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
-              Skills
-            </Link>
-            <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
-              Projects
-            </Link>
-            <Link href="#testimonials" className="text-sm font-medium hover:text-primary transition-colors">
-              Testimonials
-            </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <Button size="sm">
-            <Download className="mr-2 h-4 w-4" />
-            Resume
-          </Button>
+            <nav className="hidden md:flex gap-6">
+              <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+                About
+              </Link>
+              <Link href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
+                Skills
+              </Link>
+              <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
+                Projects
+              </Link>
+              <Link href="#testimonials" className="text-sm font-medium hover:text-primary transition-colors">
+                Testimonials
+              </Link>
+              <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+                Contact
+              </Link>
+            </nav>
+            <Button size="sm">
+              <Download className="mr-2 h-4 w-4" />
+              Resume
+            </Button>
+          </div>
         </div>
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-20 md:py-28">
-          <div className="container">
-            <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-6 text-center md:text-left">
-                {/* <Badge className="px-3 py-1 text-sm mx-auto md:mx-0 inline-flex">Available for hire</Badge> */}
+                <Badge className="px-3 py-1 text-sm mx-auto md:mx-0 inline-flex">Available for hire</Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                  Hi, I'm <span className="text-primary">Kenneth</span> <br />
-                  Backend Engineer
+                  Hi, I'm <span className="text-primary">Alex</span> <br />
+                  Full Stack Developer
                 </h1>
                 <p className="text-muted-foreground text-lg md:text-xl max-w-md mx-auto md:mx-0">
-                  I build scalable REST APIs, and design server infrastructure
+                  I build accessible, user-friendly web applications that solve real-world problems.
                 </p>
                 <div className="flex gap-4 justify-center md:justify-start">
                   <Button>
@@ -105,12 +107,12 @@ export default function Portfolio() {
 
         {/* About Section */}
         <section id="about" className="py-16 md:py-24 bg-muted/50">
-          <div className="container">
+          <div className="container mx-auto max-w-6xl px-4">
             <div className="flex items-center gap-2 mb-8 justify-center">
               <User className="h-6 w-6 text-primary" />
               <h2 className="text-3xl font-bold">About Me</h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
               <div className="relative aspect-video overflow-hidden rounded-lg">
                 <Image
                   src="/placeholder.svg?height=400&width=600"
@@ -147,53 +149,84 @@ export default function Portfolio() {
 
         {/* Skills Section */}
         <section id="skills" className="py-16 md:py-24">
-          <div className="container">
+          <div className="container mx-auto max-w-6xl px-4">
             <div className="flex items-center gap-2 mb-8 justify-center">
               <Cpu className="h-6 w-6 text-primary" />
               <h2 className="text-3xl font-bold">Skills & Technologies</h2>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              {[
-                { name: "Java", level: "Language" },
-                { name: "TypeScript", level: "Expert" },
-                { name: "React", level: "Expert" },
-                { name: "Next.js", level: "Expert" },
-                { name: "Node.js", level: "Advanced" },
-                { name: "Express", level: "Advanced" },
-                { name: "MongoDB", level: "Advanced" },
-                { name: "PostgreSQL", level: "Intermediate" },
-                { name: "GraphQL", level: "Intermediate" },
-                { name: "Docker", level: "Intermediate" },
-                { name: "AWS", level: "Intermediate" },
-                { name: "Tailwind CSS", level: "Expert" },
-              ].map((skill, index) => (
-                <Card key={index} className="overflow-hidden">
-                  <CardContent className="p-6">
-                    <div className="flex flex-col gap-2">
-                      <h3 className="font-semibold text-lg">{skill.name}</h3>
-                      <Badge
-                        variant={
-                          skill.level === "Expert" ? "default" : skill.level === "Advanced" ? "secondary" : "outline"
-                        }
-                      >
-                        {skill.level}
-                      </Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 xl:gap-10">
+              {/* Languages */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-center border-b pb-2">Languages</h3>
+                <ul className="space-y-2">
+                  {["Java", "SQL (MySQL, PostgreSQL)", "Python", "C++", "JavaScript"].map((skill, index) => (
+                    <li key={index} className="text-center py-2 px-3 bg-muted/50 rounded-md">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Frameworks */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-center border-b pb-2">Frameworks</h3>
+                <ul className="space-y-2">
+                  {["Spring Boot", "Spring Security", "Spring Batch"].map((skill, index) => (
+                    <li key={index} className="text-center py-2 px-3 bg-muted/50 rounded-md">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* CI/CD Tools */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-center border-b pb-2">CI/CD Tools</h3>
+                <ul className="space-y-2">
+                  {["Jenkins", "Git", "GitHub Actions", "Docker"].map((skill, index) => (
+                    <li key={index} className="text-center py-2 px-3 bg-muted/50 rounded-md">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Cloud */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-center border-b pb-2">Cloud</h3>
+                <ul className="space-y-2">
+                  {["Google Cloud Platform (GCP)", "Amazon Web Services (AWS)"].map((skill, index) => (
+                    <li key={index} className="text-center py-2 px-3 bg-muted/50 rounded-md">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Testing */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-center border-b pb-2">Testing</h3>
+                <ul className="space-y-2">
+                  {["JUnit & Mockito (Unit Testing)", "JMeter (API Performance Testing)"].map((skill, index) => (
+                    <li key={index} className="text-center py-2 px-3 bg-muted/50 rounded-md">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Projects Section */}
         <section id="projects" className="py-16 md:py-24 bg-muted/50">
-          <div className="container">
+          <div className="container mx-auto max-w-6xl px-4">
             <div className="flex items-center gap-2 mb-8 justify-center">
               <Code className="h-6 w-6 text-primary" />
               <h2 className="text-3xl font-bold">Featured Projects</h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
                   title: "E-commerce Platform",
@@ -256,12 +289,12 @@ export default function Portfolio() {
 
         {/* Testimonials Section */}
         <section id="testimonials" className="py-16 md:py-24">
-          <div className="container">
+          <div className="container mx-auto max-w-6xl px-4">
             <div className="flex items-center gap-2 mb-8 justify-center">
               <MessageSquare className="h-6 w-6 text-primary" />
               <h2 className="text-3xl font-bold">Testimonials</h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
                   name: "Sarah Johnson",
@@ -309,12 +342,12 @@ export default function Portfolio() {
 
         {/* Work Experience Section */}
         <section className="py-16 md:py-24 bg-muted/50">
-          <div className="container">
+          <div className="container mx-auto max-w-6xl px-4">
             <div className="flex items-center gap-2 mb-8 justify-center">
               <Briefcase className="h-6 w-6 text-primary" />
               <h2 className="text-3xl font-bold">Work Experience</h2>
             </div>
-            <div className="space-y-8 max-w-4xl mx-auto">
+            <div className="space-y-8">
               {[
                 {
                   role: "Senior Frontend Developer",
@@ -357,10 +390,10 @@ export default function Portfolio() {
 
         {/* Contact Section */}
         <section id="contact" className="py-16 md:py-24">
-          <div className="container">
-            <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground max-w-2xl mx-auto">
                 I'm currently available for freelance work and full-time positions. If you have a project that needs
                 coding or a position to fill, contact me.
               </p>
@@ -455,32 +488,34 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="border-t py-6 md:py-8">
-        <div className="container flex flex-col md:flex-row items-center justify-between gap-4 text-center">
-          <div>
-            <Link href="#" className="font-bold text-xl">
-              <span className="text-primary">Dev</span>Portfolio
-            </Link>
-            <p className="text-sm text-muted-foreground mt-1">
-              &copy; {new Date().getFullYear()} Alex Developer. All rights reserved.
-            </p>
-          </div>
-          <div className="flex gap-4">
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Twitter className="h-5 w-5" />
-              <span className="sr-only">Twitter</span>
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Mail className="h-5 w-5" />
-              <span className="sr-only">Email</span>
-            </Link>
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div>
+              <Link href="#" className="font-bold text-xl">
+                <span className="text-primary">Dev</span>Portfolio
+              </Link>
+              <p className="text-sm text-muted-foreground mt-1">
+                &copy; {new Date().getFullYear()} Alex Developer. All rights reserved.
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Github className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Twitter className="h-5 w-5" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="h-5 w-5" />
+                <span className="sr-only">Email</span>
+              </Link>
+            </div>
           </div>
         </div>
       </footer>
