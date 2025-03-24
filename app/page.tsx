@@ -15,7 +15,7 @@ export default function Portfolio() {
         <div className="container mx-auto max-w-6xl px-4">
           <div className="flex h-16 items-center justify-between">
             <Link href="#" className="font-bold text-xl">
-              <span className="text-primary">Kenneth</span>Suarez
+              <span className="text-primary">Portfolio</span>
             </Link>
             <nav className="hidden md:flex gap-6">
               <Link href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
@@ -28,10 +28,10 @@ export default function Portfolio() {
                 Education
               </Link>
             </nav>
-            <Button size="sm">
+            {/* <Button size="sm">
               <Download className="mr-2 h-4 w-4" />
               Resume
-            </Button>
+            </Button> */}
           </div>
         </div>
       </header>
@@ -42,7 +42,7 @@ export default function Portfolio() {
           <div className="container mx-auto max-w-6xl px-4">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-6 text-center md:text-left">
-                <Badge className="px-3 py-1 text-sm mx-auto md:mx-0 inline-flex">Available for hire</Badge>
+                {/* <Badge className="px-3 py-1 text-sm mx-auto md:mx-0 inline-flex">Available for hire</Badge> */}
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   Hi, I&apos;m <span className="text-primary">Kenneth</span> <br />
                   Backend Engineer
@@ -50,12 +50,12 @@ export default function Portfolio() {
                 <p className="text-muted-foreground text-lg md:text-xl max-w-md mx-auto md:mx-0">
                   I build high-performance, scalable backend systems with Java and Spring Framework.
                 </p>
-                <div className="flex gap-4 justify-center md:justify-start">
+                {/* <div className="flex gap-4 justify-center md:justify-start">
                   <Button>
                     <Download className="mr-2 h-4 w-4" />
                     Download Resume
                   </Button>
-                </div>
+                </div> */}
                 <div className="flex gap-4 pt-2 justify-center md:justify-start">
                   <Link
                     href="https://linkedin.com/in/kenneth-suarez"
