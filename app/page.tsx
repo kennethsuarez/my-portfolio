@@ -239,12 +239,12 @@ export default function Portfolio() {
                   </div>
                   <div className="md:w-1/3 flex justify-center md:justify-end">
                     <div className="relative w-24 h-24 md:w-32 md:h-32">
-                      <Image
+                      {/* <Image
                         src="/placeholder.svg?height=128&width=128"
                         alt="University logo"
                         fill
                         className="object-contain"
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>
