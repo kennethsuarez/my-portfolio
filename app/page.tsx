@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Linkedin, Mail, Download, User, Cpu, MapPin, Phone } from "lucide-react"
 import NetworkGraph from "@/components/network-graph"
+import { JSX, SVGProps } from "react"
 
 export default function Portfolio() {
   return (
@@ -78,14 +79,14 @@ export default function Portfolio() {
                 </div>
               </div>
               <div className="relative mx-auto aspect-square max-w-sm rounded-full border overflow-hidden">
-                <Image
+                {/* <Image
                   src="/placeholder.svg?height=400&width=400"
                   alt="Kenneth Suarez portrait"
                   width={400}
                   height={400}
                   className="object-cover"
                   priority
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -293,7 +294,7 @@ export default function Portfolio() {
   )
 }
 
-function BookOpen(props) {
+function BookOpen(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
